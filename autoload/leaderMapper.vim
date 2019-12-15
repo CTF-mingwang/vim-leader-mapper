@@ -198,9 +198,8 @@ function! s:CreateMenuString()
     " First add the different user configuration
     for [key, val] in items(g:leaderMenu)
         if key != "name"
-            " Extract description (ix 0 = cmd, ix 1 = description)
             " and add a space margin
-            let str = " [". key . "] " . val[1] . " "
+            let str = " [". key . "] " . val[0] . " "
             call add(s:menuList, str)
         endif
     endfor
